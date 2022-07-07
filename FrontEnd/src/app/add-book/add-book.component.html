@@ -1,0 +1,47 @@
+<div class="body">
+  <div class='card'>
+    <form id="Form" (ngSubmit)="AddBook()" ngNativeValidate >
+      <div class='card-header' style="font-size:20px;">
+        ADD BOOK
+      </div>
+      <div class='card-body'>            
+        <div class='table-responsive'>
+          <table class='table'>       
+          
+            <tbody>  
+                  <tr>
+                    <td> <label>Book Author</label></td>
+                    <td><input type="text" name="B_auth" [(ngModel)]= "BookModel.BookAuth" required></td>                  
+                  </tr>   
+                  <tr>
+                      <td><label>Book Name</label></td>
+                      <td><input type="text" name="B_name" [(ngModel)]= "BookModel.BookName" required></td>                  
+                    </tr>  
+                    <tr>
+                      <td><label>Book Image</label></td>
+                      <td><input type="text" name="B_img" [(ngModel)]= "BookModel.BookImg" required></td>                  
+                    </tr>  
+                    <tr>
+                      <td><label>Book Description</label></td>
+                      <td><input type="text" id="desc" name="B_desc" [(ngModel)]= "BookModel.BookDesc" required ></td>                  
+                    </tr>  
+                    <tr>
+                      <td></td>
+                                     
+                      <td><button id="Form" type="submit" class="btn btn-success" style="margin-right:30px ;">Submit</button> 
+                        <button routerLink="/books"  type="button" class="btn btn-danger">Cancel</button>  </td>  
+                     <!-- <td><input type="submit" value="button" /></td>                   -->
+                    </tr>  
+                    
+                    
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+      <!-- <td><button type="submit">Submit</button></td>                   -->
+  
+    </form>
+  </div>
+  
+</div>

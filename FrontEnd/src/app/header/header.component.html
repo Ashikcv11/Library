@@ -1,0 +1,20 @@
+
+<header>
+    <div class="card-header div">
+        
+        <div class="div2">
+            <h2>{{title}}</h2>
+            <p>⌣</p>
+        </div>
+        
+            <button routerLink="/books" *ngIf= "_auth.loggedIn()" class="btn btn-light"  data-mdb-ripple-color="dark">Books</button>
+            
+            <button routerLink="/add" *ngIf= "_auth.loggedIn()" class="btn btn-light"  data-mdb-ripple-color="dark">Add New Book </button>
+
+            <!-- <a *ngIf= "_auth.loggedIn()" (clcik)= "logoutUser()" >LogOut</a> -->
+            <button *ngIf="_auth.loggedIn()" (click)="logoutUser()" class="btn btn-light"  data-mdb-ripple-color="dark">Logout</button>
+
+
+
+    </div>
+</header>
